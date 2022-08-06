@@ -7,3 +7,6 @@ Utilizes Java Swing for frontend and Spring Boot for backend.
 - [ ] Make chat rooms secure and only joinable by invite.
 - [ ] Connect to database (For storing history).
 - [ ] Login and Register.
+
+# To-Do
+- [ ] Make login and register page.
