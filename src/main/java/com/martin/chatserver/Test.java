@@ -12,7 +12,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
 
-
+//testing 
 public class Test extends Application {
 
     Button button;
@@ -26,7 +26,7 @@ public class Test extends Application {
         stage.setTitle("Test");
         button = new Button("Click Me");
         button.setTranslateX(100);
-//        button.setText("Click me");
+        // button.setText("Click me");
         Circle circle = new Circle();
         circle.setRadius(100);
         StackPane layout = new StackPane();
@@ -34,7 +34,7 @@ public class Test extends Application {
         layout.getChildren().add(circle);
         layout.getChildren().add(button);
         Scene scene = new Scene(layout, 400, 500);
-        //addTextBox(stage, layout);
+        // addTextBox(stage, layout);
         stage.setScene(scene);
         stage.show();
         Translate translate = new Translate();
