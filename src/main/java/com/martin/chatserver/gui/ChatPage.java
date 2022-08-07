@@ -1,27 +1,28 @@
-package com.martin.chatserver;
+package com.martin.chatserver.gui;
+
+import com.martin.chatserver.MessagePanel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.util.function.Consumer;
 
-public class GUI extends JFrame {
+public class ChatPage extends Page {
     private JTextField nameField, groupField;
-    private JButton setName, createGroup;
-    private JTabbedPane tabbedPane = new JTabbedPane();
-    private JPanel panel = new JPanel();
-    private GridBagLayout layout = new GridBagLayout();
+    JButton setName, createGroup;
+    final JTabbedPane tabbedPane = new JTabbedPane();
     private boolean start = false;
     public static String name = "";
+    private PageManager pageManager;
 
-    public GUI() {
+    public ChatPage(PageManager pageManager) {
+        super(pageManager);
+
         MessagePanel panel = new MessagePanel("Public Room");
         tabbedPane.add(panel.room, panel);
-        setLayout(layout);
+
         initName();
         initGroup();
         initPane();
-        init();
     }
 
     public void initName() {
@@ -117,26 +118,4 @@ public class GUI extends JFrame {
         add(tabbedPane, gc);
     }
 
-    public void init() {
-        //setLayout(new GridLayout(4,4));
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (InstantiationException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (UnsupportedLookAndFeelException e) {
-            throw new RuntimeException(e);
-        }
-        setSize(600, 600);
-        setVisible(true);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setTitle("Chatroom");
-    }
-
-    public static void main(String[] args) {
-        new GUI();
-    }
 }
