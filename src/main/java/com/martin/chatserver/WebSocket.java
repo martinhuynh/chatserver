@@ -2,6 +2,7 @@ package com.martin.chatserver;
 
 import com.martin.chatserver.controller.model.Message;
 import com.martin.chatserver.controller.model.Status;
+import com.martin.chatserver.gui.ChatPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;
@@ -15,7 +16,6 @@ import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
 
 import java.lang.reflect.Type;
-import java.util.Scanner;
 import java.util.concurrent.ExecutionException;
 
 public class WebSocket {
@@ -45,7 +45,7 @@ public class WebSocket {
                 session.subscribe("/room/" + messagePanel.room, this);
                 Message msg = new Message();
                 msg.setStatus(Status.JOIN);
-                msg.setSenderName(GUI.name);
+                msg.setSenderName(ChatPage.name);
                 session.send("/room/" + messagePanel.room, msg);
                 logger.info("You joined.");
             }
@@ -76,7 +76,7 @@ public class WebSocket {
                 logger.error("Exception", exception);
                 Message msg = new Message();
                 msg.setStatus(Status.LEAVE);
-                msg.setSenderName(GUI.name);
+                msg.setSenderName(ChatPage.name);
                 session.send("/room/" + messagePanel.room, msg);
             }
 
@@ -84,7 +84,7 @@ public class WebSocket {
             public void handleTransportError(StompSession session, Throwable exception) {
                 Message msg = new Message();
                 msg.setStatus(Status.LEAVE);
-                msg.setSenderName(GUI.name);
+                msg.setSenderName(ChatPage.name);
                 session.send("/room/" + messagePanel.room, msg);
             }
         };
@@ -93,7 +93,7 @@ public class WebSocket {
 
     public void send(String text) {
         Message msg = new Message();
-        msg.setSenderName(GUI.name);
+        msg.setSenderName(ChatPage.name);
         msg.setStatus(Status.MESSAGE);
         msg.setMessage(text);
         try {
