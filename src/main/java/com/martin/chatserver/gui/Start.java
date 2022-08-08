@@ -34,7 +34,7 @@ public class Start extends JFrame {
         } catch (UnsupportedLookAndFeelException e) {
             throw new RuntimeException(e);
         }
-        setSize(600, 600);
+        setSize(1280, 720);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Chatroom");
