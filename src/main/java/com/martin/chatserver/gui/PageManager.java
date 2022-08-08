@@ -26,5 +26,6 @@ public class PageManager extends JPanel {
         removeAll();
         add(pages.get(currentPage));
         validate();
+        repaint();
     }
 }

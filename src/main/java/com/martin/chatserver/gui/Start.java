@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class Start extends JFrame {
     final PageManager pageManager = new PageManager();
+
     public Start() {
         add(pageManager);
         ChatPage chatPage = new ChatPage(pageManager);
@@ -11,6 +12,8 @@ public class Start extends JFrame {
         LoginPage loginPage = new LoginPage(pageManager);
         pageManager.addPage(Pages.LOGIN, loginPage);
         pageManager.setPage(Pages.LOGIN);
+        RegisterPage regPage = new RegisterPage(pageManager);
+        pageManager.addPage(Pages.REGISTER, regPage);
         init();
     }
 
@@ -19,7 +22,7 @@ public class Start extends JFrame {
     }
 
     public void init() {
-        //setLayout(new GridLayout(4,4));
+        // setLayout(new GridLayout(4,4));
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException e) {
