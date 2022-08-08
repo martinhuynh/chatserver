@@ -2,28 +2,29 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.martin.chatserver.gui.LoginPage">
   <grid id="27dc6" binding="panel" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="20" width="500" height="408"/>
+      <xy x="20" y="20" width="745" height="526"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
       <component id="97c1c" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipady="20"/>
+          <grid row="0" column="1" row-span="2" col-span="2" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.02" weighty="0.04" ipady="20"/>
         </constraints>
         <properties>
-          <font size="26"/>
+          <font size="33"/>
+          <horizontalTextPosition value="11"/>
           <text value="Chat Program"/>
           <verticalAlignment value="0"/>
         </properties>
       </component>
       <component id="2c07f" class="javax.swing.JTextField" binding="usernameField">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
-          <gridbag top="0" left="0" bottom="10" right="0" weightx="0.0" weighty="0.0"/>
+          <gridbag weightx="0.02" weighty="0.04" ipady="7"/>
         </constraints>
         <properties>
           <text value=""/>
@@ -31,17 +32,17 @@
       </component>
       <component id="f3d11" class="javax.swing.JPasswordField" binding="passwordField">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
-          <gridbag top="0" left="0" bottom="10" right="0" weightx="0.0" weighty="0.0"/>
+          <gridbag weightx="0.02" weighty="0.04" ipady="7"/>
         </constraints>
         <properties/>
       </component>
       <component id="9b710" class="javax.swing.JLabel">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="5" bottom="0" right="0" weightx="0.02" weighty="0.02"/>
         </constraints>
         <properties>
           <text value="Username"/>
@@ -49,8 +50,8 @@
       </component>
       <component id="7fefd" class="javax.swing.JLabel">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="5" bottom="0" right="0" weightx="0.02" weighty="0.02"/>
         </constraints>
         <properties>
           <text value="Password"/>
@@ -58,26 +59,60 @@
       </component>
       <component id="2b5a5" class="javax.swing.JButton" binding="registerButton" default-binding="true">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.05" weighty="0.05"/>
         </constraints>
         <properties>
+          <alignmentX value="0.2"/>
+          <alignmentY value="0.5"/>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <doubleBuffered value="false"/>
+          <enabled value="true"/>
+          <hideActionText value="false"/>
+          <inheritsPopupMenu value="false"/>
           <text value="Register"/>
         </properties>
       </component>
       <component id="24b2c" class="javax.swing.JButton" binding="loginButton" default-binding="true">
         <constraints>
-          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.05" weighty="0.05" ipadx="12"/>
         </constraints>
         <properties>
+          <alignmentX value="0.2"/>
+          <alignmentY value="0.5"/>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <doubleBuffered value="false"/>
+          <enabled value="true"/>
+          <hideActionText value="false"/>
+          <inheritsPopupMenu value="false"/>
           <text value="Login"/>
         </properties>
       </component>
-      <vspacer id="e216b">
+      <hspacer id="10cf1">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="200" bottom="0" right="0" weightx="1.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="728f1">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="200" bottom="0" right="0" weightx="1.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="dfbb0">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="120" right="0" weightx="0.0" weighty="1.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="85afa">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag top="120" left="0" bottom="0" right="0" weightx="0.0" weighty="1.0"/>
         </constraints>
       </vspacer>
     </children>
