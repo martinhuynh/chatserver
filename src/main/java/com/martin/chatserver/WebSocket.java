@@ -100,7 +100,6 @@ public class WebSocket {
         connectHeaders.add("password", "12345678");
 //        stompClient.connect(WS_HOST_PORT, new WebSocketHttpHeaders(), connectHeaders, new MySessionHandler());
         session = stompClient.connect(URL, headers, connectHeaders, sessionHandler);
-
     }
 
     public void send(String text) {
