@@ -11,15 +11,20 @@ import org.springframework.messaging.simp.stomp.StompHeaders;
 import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.messaging.simp.stomp.StompSessionHandler;
 import org.springframework.util.concurrent.ListenableFuture;
+import org.springframework.web.socket.WebSocketHttpHeaders;
 import org.springframework.web.socket.client.WebSocketClient;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
+import org.springframework.web.socket.sockjs.client.SockJsClient;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class WebSocket {
-    final static String URL = "ws://73.42.143.17:8080/ws";
+    final static String URL = "ws://localhost:8080/ws";
     private MessagePanel messagePanel;
     private ListenableFuture<StompSession> session;
     public WebSocket(MessagePanel messagePanel) {
@@ -88,7 +93,15 @@ public class WebSocket {
                 session.send("/room/" + messagePanel.room, msg);
             }
         };
-        session = stompClient.connect(URL, sessionHandler);
+        StompHeaders connectHeaders = new StompHeaders();
+        WebSocketHttpHeaders headers = new WebSocketHttpHeaders();
+        headers.put("username", Arrays.asList("martinhuynh@rocketmail.com"));
+        headers.put("password", Arrays.asList("12345678"));
+        connectHeaders.add("username", "martinhuynh@rocketmail.com");
+        connectHeaders.add("password", "12345678");
+//        stompClient.connect(WS_HOST_PORT, new WebSocketHttpHeaders(), connectHeaders, new MySessionHandler());
+        session = stompClient.connect(URL, headers, connectHeaders, sessionHandler);
+
     }
 
     public void send(String text) {
