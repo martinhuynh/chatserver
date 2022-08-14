@@ -33,7 +33,6 @@ public class WebSocket {
 
     private void init() {
         WebSocketClient client = new StandardWebSocketClient();
-
         WebSocketStompClient stompClient = new WebSocketStompClient(client);
         stompClient.setMessageConverter(new MappingJackson2MessageConverter());
 
