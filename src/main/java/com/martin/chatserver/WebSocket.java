@@ -24,7 +24,8 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class WebSocket {
-    final static String URL = "ws://localhost:8080/ws";
+    final static String IP = "localhost";
+    final static String URL = "ws://" + IP + ":8080/ws";
     private MessagePanel messagePanel;
     private ListenableFuture<StompSession> session;
     public WebSocket(MessagePanel messagePanel) {
