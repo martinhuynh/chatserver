@@ -15,17 +15,15 @@ import org.springframework.web.socket.WebSocketHttpHeaders;
 import org.springframework.web.socket.client.WebSocketClient;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
-import org.springframework.web.socket.sockjs.client.SockJsClient;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class WebSocket {
     final static String IP = "localhost";
-    final static String URL = "ws://" + IP + ":8080/ws";
+    final static String PORT = "8080";
+    final static String URL = "ws://" + IP + ":" + PORT + "/ws";
     private MessagePanel messagePanel;
     private ListenableFuture<StompSession> session;
     public WebSocket(MessagePanel messagePanel) {
