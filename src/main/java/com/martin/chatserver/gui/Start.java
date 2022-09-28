@@ -3,7 +3,6 @@ package com.martin.chatserver.gui;
 import javax.swing.*;
 
 public class Start extends JFrame {
-    // test commit on macbook. test 2
     final PageManager pageManager = new PageManager();
 
     public Start() {
