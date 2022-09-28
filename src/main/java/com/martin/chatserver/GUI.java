@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.util.function.Consumer;
 
 public class GUI extends JFrame {
-    //test
     private JTextField nameField, groupField;
     private JButton setName, createGroup;
     private JTabbedPane tabbedPane = new JTabbedPane();
